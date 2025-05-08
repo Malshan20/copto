@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Twitter, Facebook, Instagram, Linkedin, Github } from "lucide-react"
+import { Twitter, Facebook, Instagram, Linkedin, Github, X, Send } from "lucide-react"
 
 export default function Footer() {
   const footerLinks = [
@@ -41,11 +41,10 @@ export default function Footer() {
   ]
 
   const socialLinks = [
-    { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
+    { icon: (<svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.29 3H17.1L12 9.14L6.91 3H3.71L10.33 11.25L3 21h3.19l5.58-6.77L17.82 21H21l-7.81-9.67L20.29 3z" /></svg>), href: "#", label: "X" },
     { icon: <Facebook className="h-5 w-5" />, href: "#", label: "Facebook" },
     { icon: <Instagram className="h-5 w-5" />, href: "#", label: "Instagram" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Github className="h-5 w-5" />, href: "#", label: "GitHub" },
+    {icon: (<svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.993 15.435l-.396 4.42c.566 0 .813-.243 1.113-.535l2.664-2.535 5.52 4.014c1.013.557 1.73.265 1.996-.935l3.624-17.016-.001-.001c.339-1.59-.578-2.213-1.616-1.834L1.376 9.36C-.205 10.047-.193 10.95.97 11.308l5.775 1.795L18.61 5.616c.577-.38 1.102-.17.67.208L9.993 15.435z" /></svg>),href: "#",label: "Telegram" }
   ]
 
   return (
@@ -101,13 +100,13 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Copto.io. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/legal/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/legal/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookies
               </Link>
             </div>

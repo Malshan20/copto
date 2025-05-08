@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import WalletConnect from "./wallet-connect"
 
 export default function Cta() {
   return (
@@ -44,19 +45,8 @@ export default function Cta() {
                   Join thousands of traders who have already made the switch to the most advanced trading platform. Sign
                   up now and receive exclusive benefits.
                 </p>
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full px-8 py-6 shadow-glow-purple">
-                    Create Free Account
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="rounded-full px-8 py-6 border-purple-500/50 hover:bg-purple-900/20"
-                  >
-                    View Pricing <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-                <div className="mt-8 text-sm text-gray-400">
-                  No credit card required • Free plan available • Cancel anytime
+                <div className="flex flex-col sm:flex-row justify-center gap-4 w-1/2 mx-auto">
+                <WalletConnect />
                 </div>
               </div>
             </motion.div>

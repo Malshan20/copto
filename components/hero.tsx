@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -107,15 +108,22 @@ export default function Hero() {
               platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full px-8 py-6 shadow-glow-purple">
-                Start Trading
-              </Button>
-              <Button variant="outline" className="rounded-full px-8 py-6 border-purple-500/50 hover:bg-purple-900/20">
-                Explore Features <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/trading">
+                <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full px-8 py-6 shadow-glow-purple">
+                  Start Trading
+                </Button>
+              </Link>
+              <Link href="/features">
+                <Button
+                  variant="outline"
+                  className="rounded-full px-8 py-6 border-purple-500/50 hover:bg-purple-900/20"
+                >
+                  Explore Features <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
             <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <div className="flex -space-x-2">
+            <div className="flex -space-x-2">
                 {[1, 2].map((i) => (
                   <img
                     key={i}

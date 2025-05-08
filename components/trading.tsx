@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Trading() {
   const ref = useRef(null)
@@ -224,9 +225,11 @@ export default function Trading() {
               ))}
             </ul>
             <div>
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full px-8 py-6 shadow-glow-purple">
-                Start Trading Now
-              </Button>
+              <Link href="/trading">
+                <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full px-8 py-6 shadow-glow-purple">
+                  Start Trading Now
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
